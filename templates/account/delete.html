@@ -1,0 +1,19 @@
+{% extends "dialog_base.html" %}
+
+{% load i18n %}
+{% load bootstrap_tags %}
+{% load url from future %}
+
+{% block head_title %}Delete Account{% endblock %}
+
+{% block body %}
+    <legend class="text-danger"><i class="fa fa-remove"></i> {% trans "Delete Account" %}</legend>
+    
+    <p>If you go ahead and delete your account, your information will be <b>expunged within {{ ACCOUNT_DELETION_EXPUNGE_HOURS }} hours</b>.</p>
+    
+    <form method="post" action="/account/delete/" autocapitalize="off">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger"><i class="fa fa-warning"></i> {% trans "Delete My Account" %}</button>
+    </form>
+    
+{% endblock %}

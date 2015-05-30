@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TechNest.cz, z.s. - komunitní dílna pro kutily.</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description"
+          content="Zájmový spolek, johož členové sdílejí nářadí, přístroje a stroje ve společné dílně.">
+    <meta name="keywords"
+          content="3D tisk, cnc, dílna, nástroje, stroje, přístroje, elektrotechnika, auto, obrábění kovů, laser, řezačka, hobby, kutil, koníčky, startup">
+    <meta name="author" content="TechNest.cz">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load staticfiles %}
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <!-- Font awesome CSS -->
+    <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+    <!-- Magnific Popup -->
+    <link href="{% static "css/magnific-popup.css" %}" rel="stylesheet">
+
+    <!-- Owl carousel -->
+    <link href="{% static "css/owl.carousel.css" %}" rel="stylesheet">
+
+    <!-- CSS for this page -->
+    <link href="{% static "css/styles/background-image.css" %}" rel="stylesheet">
+
+    <!-- Base style -->
+    <link href="{% static "css/styles/style.css" %}" rel="stylesheet">
+    <!-- Skin CSS -->
+    <link href="{% static "css/styles/skin-lblue.css" %}" rel="stylesheet" id="color_theme">
+
+    <!-- Custom CSS. Type your CSS code in custom.css file -->
+    <link href="{% static "css/custom.css" %}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/technestkolo.ico">
+</head>
+
+<body>
+
+<!-- Bacground image theme Starts -->
+<div class="bgi-theme" id="top">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+
+                <div class="bgi-sidebar">
+
+                    <!-- Logo -->
+                    <div class="bgi-logo">
+                        <!--h1><a href="#"><i class="fa fa-heart"></i> &nbsp; TechNest.cz</a></h1-->
+                        <img src="static/img/technestInv.png">
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="bgi-nav">
+                        <!-- Unordered list -->
+                        <ul>
+                            <li><a href="#top">Domů</a></li>
+                            <li><a href="#onas">O nás</a></li>
+                            <li><a href="#aktuality">Aktuality</a></li>
+                            <li><a href="#vybaveni">Vybavení</a></li>
+                            <li><a href="#clenstvi">Členství</a></li>
+                            <li><a href="#dokumenty">Dokumenty</a></li>
+                            <li><a href="#kontakty">Kontakty</a></li>
+                            <li><a href="/forum/">Forum</a></li>
+                            <hr>
+                            <li><a href="https://www.facebook.com/pages/TechNestcz/1578200282459793"
+                                   class="btn btn-transparent"><i class="fa fa-facebook blue"></i>acebook</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-9 col-sm-12">
+
+                <!-- Mainbar -->
+                <div class="bgi-mainbar">
+
+                    <div class="bgi-carousel bgi-padd">
+
+
+                        <!-- Chybove zpravy starts-->
+                        {% autoescape off %}
+
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissable text-center">
+
+                                    <button class="close" aria-hidden="true" data-dismiss="alert" type="button">
+
+                                        ×
+
+                                    </button>
+                                    <strong>
+
+                                        {{ message }}
+
+                                    </strong>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% endautoescape %}
+                        <!-- Chybove zpravy  ends-->
+
+                        <!-- Bootstrap carousel usage
+                            Bootstrap carousel should have id. Below i am using "bs-carousel-X". Where "X" denotes number". If a page has more than 1 carousel, then add the new carousel with the id "bs-carousel-1", "bs-carousel-2". You also need to update the id in, "carousel indicators" section and "carousel control" section.
+
+                            Carousel comes with 3 main data attributes which you can customize. They are...
+                            data-interval - Time delay between item cycle. Default value "5000".
+                            data-pause - Pause on hover. Default value "pause".
+                            data-wrap - Continues cycle or stop at the end. Default value "true".
+                        -->
+
+                        <!-- Outer layer -->
+                        <!-- Add the class "carousel-one" for style one -->
+                        <div id="bs-carousel-3" class="carousel carousel-one slide" data-ride="carousel"
+                             data-interval="5000" data-pause="hover" data-wrap="true" style="height: 350px">
+                            <!-- Bootstrap indicators. If you don't need indicators, remove the below section -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#bs-carousel-3" data-slide-to="0" class="active"></li>
+                                <li data-target="#bs-carousel-3" data-slide-to="1"></li>
+                                <li data-target="#bs-carousel-3" data-slide-to="2"></li>
+                                <li data-target="#bs-carousel-3" data-slide-to="3"></li>
+                            </ol>
+                            <!-- Slides. You can also add captions -->
+                            <div class="carousel-inner">
+                                <!-- Item, First item should have extra class "active" -->
+                                <div class="item active">
+                                    <!-- Carousel content. Here we are using the class "carousel-one-content" -->
+                                    <div class="carousel-one-content">
+                                        <!--h5>TechNest.cz</h5-->
+                                        <h3>Máš nápady, koníčky a nemáš dílnu?</h3>
+                                        <!--a href="#" class="btn btn-transparent btn-lg">Download</a-->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- Carousel content -->
+                                    <div class="carousel-one-content">
+                                        <!--h5>Best Design Ever</h5-->
+                                        <h3>Nemáš na drahé stroje?</h3>
+                                        <!--a href="#" class="btn btn-transparent btn-lg">Download</a-->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- Carousel content -->
+                                    <div class="carousel-one-content">
+                                        <!--h5>Best Design Ever</h5-->
+                                        <h3>Možná hledáš právě</h3>
+                                        <img src="static/img/technestInvBig.png">
+                                        <!--a href="#" class="btn btn-transparent btn-lg">Download</a-->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- Carousel content -->
+                                    <div class="carousel-one-content">
+                                        <!--h5>Best Design Ever</h5-->
+                                        <h3>Zaregistruj se a...</h3>
+
+                                        <a href="/forum/account/signup/?login_provider=local"
+                                           class="btn btn-transparent btn-lg">Registrace - zatím jen do našeho fóra</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carousel style one ends -->
+                    </div>
+
+
+                    <!-- About starts -->
+                    <div class="bgi-about bgi-padd" id="onas">
+                        <!-- Heading -->
+                        <div class="bgi-heading">
+                            <h3>O nás <span>čeho můžeš být součástí</span></h3>
+                        </div>
+
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Heading -->
+                                <h4>Kdo <span>jsme?</span></h4>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <!-- Para -->
+                                <p>Jsme nezisková organizace, zájmový spolek TechNest.cz založený v květnu 2015. Jsme
+                                    otevřeni každému kdo
+                                    dovršil 18 let. Pokud jsi kutil, startupista, modelář, firma, nebo máš prostě jen
+                                    nápady,
+                                    které chceš ztvárnit, tak patříš mezi nás. Naším cílem není hromadit zisk a přidanou
+                                    hodnotu, vznikly jsme proto abychom naplnili tvoje i naše sny. Na začátku všeho byl
+                                    <a href="http://technet.idnes.cz/techshop-vynalezci-san-francisco-dqr-/tec_technika.aspx?c=A130703_153106_tec_technika_pka">tento
+                                        novinový článek</a>, který mluví za vše.</p>
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <h4>Co <span>děláme?</span></h4>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <p>Naším cílem je vytvořit dílnu, která bude vybavena zařízením potřebným k realizaci
+                                    jakéhokoliv nápadu. Chceme pokrýt oblati strojírenství, elektrotechniky,
+                                    dřevoobráběcí, automoto a další. Společným financováním našich členů chceme postupně
+                                    pořídit stroje, které bychom si každý sám nejspíše nemohli dovolit, nebo je neměli
+                                    kam dát. Pokud bydlíš v bytě, tak tam soustruh budeš mít jen těžko. Hodila by se ti
+                                    3D tiskárna, laserová řezačka, cncéčko, svářečka, a další, jenže stojí to hodně
+                                    peněz a potřebuješ je jen občas? Jsme na tom podobně a napadlo nás tuhle situaci
+                                    vyřešit zájmovým spolkem a společnou dílnou se společným vybavením. Financování
+                                    chceme zajistit členskými příspěvky a využitím evropských dotací.</p>
+                                <a href="http://www.facebook.com/sharer.php?u=http://www.technest.cz"
+                                   class="btn btn-blue btn-outline"></i> Pomoz
+                                    rozšířit naší komunitu a sdílej nás na <i class="fa fa-facebook blue"></i><span class="white">acebooku</span>.</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- About ends -->
+
+                    <!-- Aktuality starts -->
+                    <div class="bgi-about bgi-padd" id="aktuality">
+                        <!-- Heading -->
+                        <div class="bgi-heading">
+                            <h3>Aktuality <span>co se děje</span></h3>
+                        </div>
+
+                        <br/>
+
+                        {% autoescape off %}
+                        {% for aktualita in aktuality %}
+
+                        <div class="s-result-item">
+                            <h3>
+                                <span class="orange"> {{ aktualita.nadpis }} </span>
+                            </h3>
+                            <span class="orange"> {{ aktualita.datum|date }} </span>
+                            <p>
+                                {{ aktualita.text }}
+                            </p>
+                        </div>
+
+                        {% endfor %}
+                        {% endautoescape %}
+
+
+
+
+
+                    </div>
+                    <!-- Aktuality ends -->
+
+
+
+
+                    <!-- Service starts -->
+                    <div class="bgi-service bgi-padd " id="vybaveni">
+                        <!-- Heading -->
+                        <div class="bgi-heading">
+                            <h3>Vybavení <span>jak si to představujeme</span></h3>
+                        </div>
+
+                        <div class="row text-center icon-box-1 text-center">
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Icon Box One Item -->
+                                <div class="icon-box-1-item">
+                                    <!-- Icon Box One Icon -->
+                                    <a href="#"><i class="fa fa-gears red"></i></a>
+                                    <!-- Icon Box One Headeing -->
+                                    <h4>Strojírenství</h4>
+                                    <!-- Icon Box One Paragraph -->
+                                    <p>Zámečnická dílna - obráběcí stroje, svařování. Brusky, vrtačky, nůžky, ohýbačka,
+                                        Mig/Mag, Tig/Wig, svářečka, CAD, laserová řezačka, cnc, 3D tisk, ponky, ruční
+                                        nářadí, el. nářadí.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Icon Box One Item -->
+                                <div class="icon-box-1-item">
+                                    <a href="#"><i class="fa fa-dashboard blue"></i></a>
+                                    <h4>Elektrotechnika</h4>
+
+                                    <p>Elektrotecnická dílna - výroba a ladění. Výpočetní technika, CAD, výroba DPS,
+                                        multimetry, osciloskopy, spektrální analyzer, ruční nářadí, el. nářadí, pracovní
+                                        stoly.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Icon Box One Item -->
+                                <div class="icon-box-1-item">
+                                    <a href="#"><i class="fa fa-tree green"></i></a>
+                                    <h4>Dřevovýroba</h4>
+
+                                    <p>Truhlářská dílna - řezání a obrábění. Pila, protahovačka, hoblovka, olepovačka,
+                                        cnc, ruční nářadí, el. nářadí, ponky.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row text-center icon-box-1 text-center">
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Icon Box One Item -->
+                                <div class="icon-box-1-item">
+                                    <a href="#"><i class="fa fa-car purple"></i></a>
+                                    <h4>AutoMoto</h4>
+
+                                    <p>Autodílna - opravy aut. Sloupový zvedák, mycí stůl, Mig/Mag, zdvihací rameno,
+                                        zouvačka, vyvažovačka, kompresor, ruční nářadí, el. nářadí, ponk.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Icon Box One Item -->
+                                <div class="icon-box-1-item">
+                                    <a href="#"><i class="fa fa-thumbs-up brown"></i></a>
+                                    <h4>Ruční práce</h4>
+
+                                    <p>Něco nejen pro něžné pohlaví. Šicí a pletací stroje, hrnčířský kruh, pec,
+                                        sítotisk, vyřezávací plotr, výtvarné potřeby, ruční nářadí, pracovní stoly.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <!-- Icon Box One Item -->
+                                <div class="icon-box-1-item">
+                                    <a href="#"><i class="fa fa-child yellow"></i></a>
+                                    <h4>Dětský koutek</h4>
+
+                                    <p>Aby se vaše ratolesti nenudili zatímco vy se budete snažit o lepší a nebo alespoň
+                                        hezčí svět.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Service ends -->
+
+
+                    <!-- Clenstvi starts -->
+                    <div class="bgi-about bgi-padd" id="clenstvi">
+                        <!-- Heading -->
+                        <div class="bgi-heading">
+                            <h3>Členství <span>když chceš být členem</span></h3>
+                        </div>
+
+                        <br/>
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12">
+                                <!-- Para -->
+                                <p>Momentálně probíhá registrace spolku a připravujeme přihlášky. Musíme promyslet výši
+                                    členských příspěvků a další věci. Snažíme se jednant rychle aby jsme co nejdříve
+                                    mohli začít realizovat. Každopádně pokud už teď víš, že chceš této myšlence pomoci a
+                                    přidat se k nám, tak se zaregistruj do fóra a kontaktuj nás přes formulář níže, nebo
+                                    emailem. <span
+                                            class="highlite red">Získáš tím možnost ovlivnit vývoj naší komunity!</span>
+                                </p>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <!-- Para -->
+                                <p>Hned jakmile budeme zaregistrováni jako spolek, tak zřídíme transparentní bankovní
+                                    účet a sem umístíme formulář s přihláškou ke členství.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Clenstvi ends -->
+
+
+                    <!-- Dokumenty starts -->
+                    <div class="bgi-about bgi-padd" id="dokumenty">
+                        <!-- Heading -->
+                        <div class="bgi-heading">
+                            <h3>Dokumenty <span>počti si</span></h3>
+                        </div>
+
+                        <br/>
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12">
+                                <!-- Para -->
+                                <p>
+                                    Zatím žádné dokumenty.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- Dokumenty ends -->
+
+                    <!-- Contact us starts -->
+                    <div class="bgi-contact bgi-padd" id="kontakty">
+                        <!-- Heading -->
+                        <div class="bgi-heading">
+                            <h3>Kontakty <span>přivítáme každý nápad, pomoc nebo sponzora </span></h3>
+                        </div>
+
+                        <div class="bgi-c-details">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <i class="fa fa-home"></i> TechNest.cz, z.s.<br/>
+                                    Voborského 1401/8 <br/>
+                                    Praha 4 – Modřany<br/>
+                                    143 00<br/>
+                                </div>
+                                <div class="col-md-6">
+                                    <i class="fa fa-phone"></i> &nbsp; +(420) - 723 642 053<br/>
+                                    <i class="fa fa-envelope"></i> &nbsp; info@technest.cz<br/>
+                                    <i class="fa fa-envelope"></i> &nbsp; predseda@technest.cz<br/>
+                                    <i class="fa fa-envelope"></i> &nbsp; rada@technest.cz<br/>
+                                    <!--i class="fa fa-fax"></i> &nbsp; +(567) - 235 8764 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div class="bgi-c-form">
+                            <h5>Kontaktuj nás:</h5>
+                            <!-- Form -->
+
+
+                            <form class="form" role="form" method="post" action="/">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            {{ form.jmeno }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            {{ form.email }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            {{ form.tel }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.zprava }}
+                                </div>
+                                <!-- Button -->
+                                <button type="send" class="btn btn-red">Odeslat zprávu</button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                    <!-- Contact us ends -->
+
+                    <hr/>
+
+                    <div class="bgi-copy">
+                        Copyright &copy; 2015 - TechNest.cz
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Javascript files -->
+<!-- jQuery -->
+<script src="{% static "js/jquery.js" %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<!-- Placeholders JS -->
+<script src="{% static "js/placeholders.js" %}"></script>
+<!-- Magnific Popup -->
+<script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+<!-- Respond JS for IE8 -->
+<script src="{% static "js/respond.min.js" %}"></script>
+<!-- HTML5 Support for IE -->
+<script src="{% static "js/html5shiv.js" %}"></script>
+
+<!-- Javascript for this page -->
+<!-- Arbitary Anchor -->
+<script src="{% static "js/jquery.arbitrary-anchor.js" %}"></script>
+
+<script type="text/javascript">
+/* ************** */
+/* Magnific Popup */
+/* ************** */
+$(document).ready(function() {
+$('.lightbox').magnificPopup({type:'image'});
+});
+
+</script>
+
+<!-- Custom JS. Type your JS code in custom.js file -->
+<script src="{% static "js/custom.js" %}"></script>
+
+
+<script src="{% static "style-switcher/style-switcher.js" %}"></script>
+
+</body>
+</html>

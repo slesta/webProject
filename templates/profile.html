@@ -1,0 +1,29 @@
+{% extends "dialog_base.html" %}
+
+{% load url from future %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block head_title %}{% trans "Profile" %}{% endblock %}
+
+{{ request.user }}
+
+{% block body %}
+    <form method="POST" action="">
+        <legend class="text-info"> <i class="fa fa-user"></i> {% trans "Profile" %}</legend>
+        <fieldset>
+            {% csrf_token %}
+            {{ profile_form|as_bootstrap }}
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> {% trans "Save profile" %}</button>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
+
+{% block extra_body %}
+    <script>
+        $("#id_email").focus();
+    </script>
+{% endblock %}

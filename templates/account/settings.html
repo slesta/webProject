@@ -1,0 +1,17 @@
+{% extends "dialog_base.html" %}
+
+{% load url from future %}
+{% load bootstrap_tags %}
+
+{% block head_title %}Settings{% endblock %}
+
+{% block body %}
+    <form method="POST" action="{% url "account_settings" %}">
+        <legend class="text-info"><i class="fa fa-gears"></i> Settings</legend>
+        {% csrf_token %}
+        {{ form|as_bootstrap }}
+        <div class="form-actions">
+            <button class="btn btn-success" type="submit"><i class="fa fa-send"></i> Save</button>
+        </div>
+    </form>
+{% endblock %}

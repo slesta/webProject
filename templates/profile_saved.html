@@ -1,0 +1,16 @@
+{% extends "dialog_base.html" %}
+
+{% load url from future %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block head_title %}{% trans "Profile" %}{% endblock %}
+
+{{ request.user }}
+
+{% block body %}
+    <h3 class="text-info"><i class="fa fa-user"></i> {% trans "Profile saved" %}</h3>
+    <p>{% blocktrans %} Your profile changes are saved. {% endblocktrans %}</p>
+{% endblock %}
+
+
